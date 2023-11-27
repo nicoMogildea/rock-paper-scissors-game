@@ -1,0 +1,204 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,*:before,*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a294a;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    width: 90%;
+    border: 1px solid #d2d2d24f;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: inset 2px 4px 100px #273b65;
+}
+.title{
+    font-size: 1.7rem;
+    line-height: .88;
+    font-weight: 100;
+}
+.players-box{
+    display: flex;
+    gap: .8rem;
+    justify-content: center;
+    align-items: center;
+}
+.players-box >div{
+    width: 8.2rem;
+    background-color: #fff;
+    color: #1a294a;
+    text-align: center;
+    padding: .6rem;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+}
+.players-box >div>p:nth-of-type(1){
+    color: #364fcc
+}
+.players-box >div>p:nth-of-type(2){
+    font-size: 2.5rem;
+}
+.animated{
+    animation: shift .15s linear;
+}
+.rotate{
+    animation: rotate .4s linear;
+}
+@keyframes shift{
+    from{
+        transform: translateY(40px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes rotate{
+    from{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(0);
+    }
+}
+.main{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.main>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main >div h5{
+    font-size: 1.4rem;
+    text-align: center;
+}
+.main >div >div{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    box-shadow: 0 0 0 .5rem #eca114;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    transition: all .3s linear;
+}
+.main >div:nth-of-type(3) >div{
+    box-shadow: 0 0 0 .5rem #4865f4;
+}
+.main >div >div>i{
+    font-size: 4rem;
+    color: #1a294a;
+}
+@media(min-width:1000px){
+    .container{
+        box-shadow: inset 0 0 0 1px rgba(225, 225, 225, 0.245);
+        padding: 2rem 0;
+        border-radius: 3px;
+    }
+    .main{
+        margin-top: 10rem;
+        gap: 10rem;
+    }
+    .main >div h5{
+        font-size: 2rem;
+    }
+    .main >div >div{
+        width: 100px;
+        height: 100px;
+    }
+    .main >div >div>i{
+        font-size: 6rem;
+    }
+}
+.main>div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.winnerPlayer{
+    box-shadow: 0 0 0 .5rem #eca114,
+                0 0 0 1.2rem #ffffff25,
+                0 0 0 1.9rem #ffffff29,
+                0 0 10rem #e0e0e0 !important;
+}
+.winnerBot{
+    box-shadow: 0 0 0 .5rem #4865f4,
+                0 0 0 1.2rem #ffffff25,
+                0 0 0 1.9rem #ffffff29,
+                0 0 10rem #e0e0e0 !important;
+}
+.playBtn{
+    margin-top: .8rem;
+    background-color: #fff;
+    color: #1a294a;
+    border: none;
+    outline: none;
+    padding: .6rem 4rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all .15s linear;
+}
+.playBtn:hover{
+    box-shadow: inset 0 0 0 1px #e0e0e0;
+    color: #e0e0e0;
+    background-color: transparent;
+}
+footer{
+    width: 100%;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 3rem;
+}
+footer >button{
+    background-color: transparent;
+    color: #e0e0e0;
+    border: 1px solid #e0e0e04d;
+    padding: .4rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+footer >button:hover{
+    border-color: #e0e0e0;
+    color: #fff;
+}

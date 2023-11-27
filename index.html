@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8535745612.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <h5>ROCK</h5>
+                <h5>PAPER</h5>
+                <h5>SCISSORS</h5>
+                <h5>NICO'S</h5>
+                <h5>GAMES</h5>
+            </div>
+            <div class="players-box">
+                <div>
+                    <p>Player</p>
+                    <p class="counterP">0</p>
+                </div>
+                <div>
+                    <p>Computer</p>
+                    <p class="counterC">0</p>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div>
+                <h5 class="PlayerActions">Player</h5>
+                <div id="playerBox">
+                    <i data-playerChoice class="fa-regular fa-hand-back-fist"></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="outcome">DRAW!</h1>
+                <button class="playBtn">Play</button>
+            </div>
+            <div> 
+                <h5 class="ComputerActions">Computer</h5>
+                <div id="computerBox">
+                    <i data-computerChoice class="fa-regular fa-hand-back-fist"></i>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <button id="resetScore">RESET SCORE</button>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
